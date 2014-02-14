@@ -3,7 +3,7 @@
 -- CMPT308L
 
 
--- Q1-Get the cities of agents booking an order for customer �Basics�.
+-- Q1-Get the cities of agents booking an order for customer "Basics".
 select city
 from agents
 where aid in (select aid
