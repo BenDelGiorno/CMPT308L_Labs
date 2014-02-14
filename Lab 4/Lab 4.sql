@@ -3,7 +3,7 @@
 -- CMPT308L
 
 
--- Q1-Get	the	cities of agents booking	an order for customer “Basics”.
+-- Q1-Get the cities of agents booking an order for customer ï¿½Basicsï¿½.
 select city
 from agents
 where aid in (select aid
@@ -14,7 +14,7 @@ where aid in (select aid
               );
 
 
--- Q2-Get	the	pids of products ordered through any	agent	who	makes	at least one order for a	customer in Kyoto. (This is not	the	same as	asking for pids of products ordered by	a	customer in Kyoto.)
+-- Q2-Get the	pids of products ordered through any agent who makes at least one order for a customer in Kyoto. (This is not the same as asking for pids of products ordered by a customer in Kyoto.)
 select distinct pid
 from orders
 where aid in (select aid
@@ -25,7 +25,7 @@ where aid in (select aid
                );
                
 
--- Q3-Find	the	cids and names of customers who never placed an order through agent a03.	
+-- Q3-Find the cids and names of customers who never placed an order through agent a03.	
 select cid, name
 from customers
 where cid not in (select cid 
@@ -36,7 +36,7 @@ where cid not in (select cid
                    );
             
                
--- Q4-Get	the	cids and names of customers	who	ordered	both product p01 and p07.	
+-- Q4-Get the	cids and names of customers	who ordered both product p01 and p07.	
 select cid, name
 from customers
 where cid in (select distinct cid
@@ -47,7 +47,7 @@ where cid in (select distinct cid
               );
 
 
--- Q5-Get	the	pids of products ordered by any	customers	who	ever placed	an order through agent a03.
+-- Q5-Get the	pids of products ordered by any customers	who ever placed an order through agent a03.
 select pid
 from products
 where pid in (select pid
@@ -55,7 +55,7 @@ where pid in (select pid
               where aid = 'a03');
             
 
--- Q6-Get	the	names	and	discounts	of all customers who place orders through	agents in	Dallas or	Duluth.	
+-- Q6-Get the	names and discounts of all customers who place orders through agents in Dallas or Duluth.	
 select name, discount
 from customers
 where cid in (select cid
@@ -67,7 +67,7 @@ where cid in (select cid
               );
 
 
--- Q7-Find all customers who have	the	same discount	as that	of any customers in Dallas	or Kyoto.
+-- Q7-Find all customers who have the same discount as that of any customers in Dallas or Kyoto.
 select *
 from customers
 where discount in (select discount
