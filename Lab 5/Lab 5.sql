@@ -3,7 +3,7 @@
 -- CMPT308L
 
 
--- Q1-Get the cities of agents booking an	order	for customer Basics. This time use joins, No subqueries.
+-- Q1-Get the cities of agents booking an order	for customer Basics. This time use joins, No subqueries.
 select a.city
 from agents a, 
       orders o,
@@ -13,7 +13,7 @@ where a.aid = o.aid
   and c.name = 'Basics'
 group by a.city;
 
--- Q2-Get the pids of products ordered through any agent who makes at least one order for	a customer in Kyoto. Use joins this	time;	no subqueries.	
+-- Q2-Get the pids of products ordered through any agent who makes at least one order for a customer in Kyoto. Use joins this	time;	no subqueries.	
 select pid
 from orders o,
       agents a,
