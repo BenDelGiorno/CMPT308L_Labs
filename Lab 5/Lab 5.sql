@@ -38,7 +38,7 @@ from customers c left outer join orders o on c.cid = o.cid
 where o.cid is null;
 
 
--- Q5-Get the names of customers who placed at	least	one order through	an agent in	their	city,	along	with	those	agent(s) names.	
+-- Q5-Get the names of customers who placed at least one order through an agent in their city, along with those agent(s) names.	
 select c.name, a.name
 from customers c, agents a, orders o
 where c.city = a.city
@@ -47,7 +47,7 @@ where c.city = a.city
 group by c.name, a.name;
 
 
--- Q6-Get the names of customers and agents in the same city, along with the name of the city,	regardless of whether or not the customer	has ever placed an order with	that agent.	
+-- Q6-Get the names of customers and agents in the same city, along with the name of the city, regardless of whether or not the customer has ever placed an order with	that agent.	
 select c.name, a.name
 from customers c, agents a
 where c.city = a.city;
