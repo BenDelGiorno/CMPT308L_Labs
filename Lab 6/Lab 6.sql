@@ -53,7 +53,7 @@ order by c.name asc;
 
 -- Q6-Show the names of all customers who bought products from agents based in New
 -- York along with the names of the products they ordered, and the names of the agents	
--- who sold it to	them.	
+-- who sold it to them.	
 select c.name, p.name, a.name
 from orders o inner join customers c on o.cid = c.cid
                inner join products p on o.pid = p.pid
