@@ -64,8 +64,9 @@ where a.city = 'New York';
 -- Q7-Write a query to check the accuracy of the dollars column in the Orders table. This	
 -- means calculating Orders.dollars from other data in other tables and then comparing	
 -- those values to the values in Orders.dollars
-select *
-from orders o inner join customers c on o.cid = c.cid
-               inner join products p on o.pid = p.pid
-where o.dollars = (o.qty * p.priceUSD) * (1 - (c.discount / 100))
-order by o.ordno asc;
+select (o.qty * p.priceUSD) * (1 - (c.discount/100)) as "Accurate Calculated Total", o.dollars
+from orders o,
+     products p,
+     customers c
+where o.pid = p.pid
+  and c.cid = o.cid
