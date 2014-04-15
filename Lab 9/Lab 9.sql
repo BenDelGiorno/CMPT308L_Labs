@@ -2,7 +2,7 @@
 -- Lab Assignment 9
 -- CMPT 308L
 
-DROP TABLE IF EXISTS crews;
+DROP TABLE IF EXISTS crew;
 DROP TABLE IF EXISTS catalog;
 DROP TABLE IF EXISTS suppliers;
 DROP TABLE IF EXISTS parts;
